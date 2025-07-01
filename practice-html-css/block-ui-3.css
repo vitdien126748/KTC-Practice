@@ -1,0 +1,88 @@
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  background: #f5f8fc;
+  padding: 40px;
+  display: flex; justify-content: center;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-card {
+  width: 240px;
+  height: 200px;
+  background: #fff;
+  box-shadow: 5px 5px #E8EBF1;
+  overflow: hidden;
+}
+
+.header {
+  padding: 16px 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.header h3 {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #888;
+}
+.header .stat-number {
+  margin-top: 6px;
+  font-size: 32px;
+  font-weight: lighter;
+  color: #2dc7ec;
+}
+
+.chart {
+  padding: 16px 20px;
+  background-color: #FCFCFC;
+}
+
+.bar-columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 6px;
+  row-gap: 8px;
+  align-items: end;
+}
+
+.bar-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  width: 50%;
+  height: 60px;
+  border: 0.5px solid #888;
+  background: #FCFCFC;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.fill {
+  position: absolute; bottom: 0;
+  width: 100%;
+}
+.fill.mon    { background: #F75351; }
+.fill.tue   { background: #51D566; }
+.fill.wed  { background: #FCD518; }
+.fill.thu { background: #31C8DD; }
+.fill.fri   { background: #F78153; }
+
+.label {
+  font-size: 10px;
+  color: #aaa;
+  text-align: center;
+  width: 100%;
+}

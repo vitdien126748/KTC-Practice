@@ -1,0 +1,60 @@
+/* Reset & font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  background: #fafafa;
+  padding: 40px;
+}
+
+/* Container */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Card chung */
+.card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Icon */
+.icon {
+  font-size: 32px;
+}
+
+/* Text */
+.text h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.text p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* Màu nền từng card */
+.facebook  { background: #4A89DC; }
+.twitter   { background: #31C8DD; }
+.google    { background: #F47649; }
+.pinterest { background: #EF5350; }
