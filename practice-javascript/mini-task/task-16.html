@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="addBoxBtn">Add box</button>
+    <div id="boxContainer"></div>
+    <script>
+        const addBoxBtn = document.getElementById('addBoxBtn');
+        const boxContainer = document.getElementById('boxContainer');
+        boxContainer.style.display = 'flex'
+        boxContainer.style.flexWrap = 'wrap'
+        addBoxBtn.addEventListener('click', function() {
+            const newBox = document.createElement('div');
+            newBox.style.width = '100px'
+            newBox.style.height = '100px'
+            newBox.style.backgroundColor = `rgb(${Math.random()*256},${Math.random()*256},${Math.random()*256})`
+            boxContainer.appendChild(newBox);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./dog.jpg" alt="" class="thumbnail" id="mainPhoto" width="400px" height="400px">
+    <div>
+        <img src="./dog.jpg" alt="" class="thumbnail" width="100px" height="100px">
+        <img src="./dog-meme-1.jpg" alt="" class="thumbnail" width="100px" height="100px">
+        <img src="./dog-meme-2.jpg" alt="" class="thumbnail" width="100px" height="100px">
+        <img src="./dog-meme-3.jpg" alt="" class="thumbnail" width="100px" height="100px">
+    </div>
+    <script>
+        document.querySelectorAll('.thumbnail').forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                document.getElementById('mainPhoto').src = thumbnail.src;
+            })
+        })
+    </script>
+</body>
+</html>

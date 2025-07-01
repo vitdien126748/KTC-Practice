@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="hideParaBtn">Hide</button>
+    <p id="infoPara">Vịt Điên</p>
+    <script>
+        const hideParaBtn = document.getElementById('hideParaBtn');
+        const infoPara = document.getElementById('infoPara');
+        hideParaBtn.addEventListener('click',function() {
+            infoPara.style.display = "none";
+        })
+    </script>
+</body>
+</html>

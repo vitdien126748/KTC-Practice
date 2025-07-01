@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="colorBtn">Button 1</button>
+    <button class="colorBtn">Button 2</button>
+    <button class="colorBtn">Button 3</button>
+    <button class="colorBtn">Button 4</button>
+    <button class="colorBtn">Button 5</button>
+    <script>
+        document.querySelectorAll('.colorBtn').forEach(function(btn){
+            btn.addEventListener('click', function(){
+                alert(btn.textContent);
+            })
+        })
+    </script>
+</body>
+</html>

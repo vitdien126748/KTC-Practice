@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="bioInput" maxlength="200"></textarea>
+    <p id="charCount">characters remaining: 200</p>
+    <script>
+        const bioInput = document.getElementById('bioInput');
+        const charCount = document.getElementById('charCount');
+        const maxChars = 200;
+        bioInput.addEventListener("input", () => {
+            const remainingChars = maxChars - bioInput.value.length;
+            charCount.textContent = `characters remaining: ${remainingChars}`;
+        });
+    </script>
+</body>
+</html>
