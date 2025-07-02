@@ -1,0 +1,16 @@
+.card {
+    width: 270px;
+    height: 67px;
+    padding: 8px 30px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.team {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bolder;
+}

@@ -1,0 +1,38 @@
+.card {
+    padding: 8px 30px;
+    height: 98px;
+    width: 270px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.minute {
+    color: #DB2D2D;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.team {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.score {
+    font-size: 19px;
+    font-weight: bolder;
+    padding: 10px 15px;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+}

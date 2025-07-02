@@ -1,0 +1,26 @@
+.card {
+    width: 282px;
+    height: 115px;
+    padding: 24px 24px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.board {
+    display: flex;
+    flex-direction: column;
+    
+}
+.bar {
+    width: 235px;
+    height: 6px;
+    background-color: #F4F9FC;
+    border-radius: 50px;
+}
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,17 @@
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  align-items: center;
+  width: 400px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px 0px;
+  background-color: #E2E9EE;
+}
+div.exercise {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+}

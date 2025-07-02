@@ -1,0 +1,17 @@
+.weather {
+    height: 49px;
+    width: 25px;
+    padding: 6px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+}
+.weatherImg {
+    width: 25px;
+    height: 25px;
+
+}
+.day {
+    font-size: 13px;
+}

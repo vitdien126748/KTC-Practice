@@ -1,0 +1,26 @@
+.button {
+    background-color: #fff;
+    color: #111;
+    padding: 8px 16px;
+    display: flex;
+    height: 51px;
+    width: 330px;
+    border-radius: 20px;
+    border: 1px solid #111;
+    justify-content: space-between;
+    align-items: center;
+}
+.button span {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+.placeholder {
+    color: #A2AAAD;
+    font-size: 14px;
+}
+
+.text {
+    font-size: 16px;
+    font-weight: 600;
+}

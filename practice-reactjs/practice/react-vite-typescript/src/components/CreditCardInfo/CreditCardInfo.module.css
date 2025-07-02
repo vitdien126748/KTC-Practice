@@ -1,0 +1,25 @@
+.card {
+    width: 270px;
+    height: 88px;
+    padding: 8px 30px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.avt {
+    width: 56px; 
+    border-radius: 50%;
+}
+.info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+.visa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
