@@ -1,0 +1,28 @@
+.newsBoard {
+    margin: 20px 40px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    border: 1px solid;
+    border-radius: 20px;
+}
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.newsList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.title {
+    font-size: 24px;
+    font-weight: bolder;
+}
+.seeMore {
+    font-size: 15px;
+    font-weight: bold;
+}

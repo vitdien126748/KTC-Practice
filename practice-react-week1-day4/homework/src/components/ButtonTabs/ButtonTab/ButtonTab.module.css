@@ -1,0 +1,16 @@
+.buttonTabContainer {
+    width: 760px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contentContainer {
+    padding-top: 6px;
+}

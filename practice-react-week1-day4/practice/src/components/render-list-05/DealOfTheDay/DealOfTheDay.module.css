@@ -1,0 +1,43 @@
+.dealOfTheDay {
+    margin: 20px 20px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+    padding-right: 50px;
+}
+
+.timer {
+    font-size: 20px;
+    color: white;
+    background-color: #F24604;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.viewAll {
+    font-size: 16px;
+    border-bottom: 1px solid;
+}
+
+.productList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid;
+    padding-top: 50px;
+}

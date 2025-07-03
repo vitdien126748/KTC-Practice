@@ -1,0 +1,34 @@
+.viewedProduct {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 20px 200px;
+}
+
+.productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 280px;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clearAll {
+    width: 100px;
+    height: 20px;
+    background-color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}

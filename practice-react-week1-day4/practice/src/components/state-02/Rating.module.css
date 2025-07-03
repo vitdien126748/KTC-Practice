@@ -1,0 +1,39 @@
+.star {
+    color: gray;
+    cursor: pointer;
+}
+
+.star.checked {
+    color: gold;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.label {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.ratingLevel {
+    color: white;
+    width: 80px;
+    background-color: #52B858;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bad {
+    background-color: #FF4D4D;
+}
+
+.good {
+    background-color: #006aff;
+}

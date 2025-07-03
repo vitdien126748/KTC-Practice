@@ -1,0 +1,93 @@
+.product {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imageContainer {
+    width: 220px;
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    width: 220px;
+    height: 190px;
+    border-radius: 10px;
+}
+
+.bestSaleTag {
+    width: 80px;
+    height: 30px;
+    background-color: #FF6700;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    color: white;
+}
+
+.shopName {
+    font-size: 14px;
+    color: #999999;
+    padding: 10px 0px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.priceContainer {
+    display: flex;
+    column-gap: 8px;
+    align-items: end;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #79A319;
+}
+
+.saleOffPrice {
+    font-size: 16px;
+    color: #9E9E9E;
+    text-decoration: line-through;
+}
+
+.saleOffPercent {
+    font-size: 16px;
+    color: #FF6700;
+}
+
+.title {
+    font-size: 16px;
+    color: #5597D6;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.ratingBar {
+    width: 100%;
+    height: 10px;
+    background-color: #E5E5E5;
+}
+
+.fill {
+    height: 100%;
+    background-color: #FAB800;
+}
+
+.sold {
+    font-size: 16px;
+    color: #999999;
+    line-height: 30px;
+}

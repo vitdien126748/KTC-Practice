@@ -1,0 +1,49 @@
+.product {
+    width: 240px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.imageContainer {
+    width: 240px;
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+}
+.image {
+    width: 240px;
+    height: 190px;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bolder;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+.saleOffPrice {
+    font-size: 18px;
+    color: #8F989D;
+    text-decoration: line-through;
+}
+.saleOffTag {
+    width: 60px;
+    height: 30px;
+    background-color: #FF6700;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    color: white;
+}

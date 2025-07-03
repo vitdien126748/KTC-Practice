@@ -1,0 +1,9 @@
+.image {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ccc;
+}
+
+.selected {
+    border: 1px solid orange;
+}

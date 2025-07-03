@@ -1,0 +1,9 @@
+.buttonGroupContainer {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.buttonList {
+    display: flex;
+    column-gap: 5px;
+}
