@@ -1,0 +1,12 @@
+.hoverDiv {
+    padding: 50px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.hovered {
+    background-color: yellow;
+}
