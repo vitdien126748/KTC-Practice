@@ -14,16 +14,16 @@ function App() {
 
   return (
     <>
-      {/* <ButtonClickCounter /> */}
-      {/* <InputFieldTracker/> */}
-      {/* <ToggleButton/> */}
-      {/* <HoverHighLight /> */}
-      {/* <FormSubmissionAlert /> */}
-      {/* <KeyPressDisplay/> */}
-      {/* <DoubleClickMessage /> */}
-      {/* <DropdownSelection/> */}
-      {/* <CheckboxToggle /> */}
-      <SearchFilter/>
+      <ButtonClickCounter />
+      <InputFieldTracker />
+      <ToggleButton />
+      <HoverHighLight />
+      <FormSubmissionAlert />
+      <KeyPressDisplay />
+      <DoubleClickMessage />
+      <DropdownSelection />
+      <CheckboxToggle />
+      <SearchFilter />
     </>
   )
 }

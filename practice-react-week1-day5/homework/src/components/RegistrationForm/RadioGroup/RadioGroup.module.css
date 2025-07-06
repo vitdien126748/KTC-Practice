@@ -1,0 +1,5 @@
+.radioGroup {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}

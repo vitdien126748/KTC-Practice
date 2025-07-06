@@ -1,0 +1,15 @@
+.input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.inputError {
+  border-color: red;
+}
+.label {
+  display: block;
+  margin-top: 10px;
+}

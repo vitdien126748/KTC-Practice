@@ -9,9 +9,13 @@ const SearchFilter = () => {
         fruit.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(event.target.value);
+    };
+
     return (
         <div>
-            <input type="text" placeholder="Search..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+            <input type="text" placeholder="Search..." value={searchTerm} onChange={handleInputChange} />
             <ul>
                 {filteredFruits.map((fruit, index) => (
                     <li key={index}>{fruit}</li>
