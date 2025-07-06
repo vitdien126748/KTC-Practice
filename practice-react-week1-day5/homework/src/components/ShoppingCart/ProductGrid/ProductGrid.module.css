@@ -3,3 +3,16 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+@media (max-width: 900px) {
+    .productGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .productGrid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 0 4px;
+    } }

@@ -84,3 +84,16 @@
     background: #c75e13;
     color: white;
 }
+@media (max-width: 600px) {
+    .cartDropdown {
+        width: 95vw;
+        left: 2.5vw !important;
+        right: auto !important;
+        min-width: unset;
+        font-size: 14px;
+    }
+
+    .cartItems {
+        max-height: 200px;
+        overflow-y: auto;
+    } }

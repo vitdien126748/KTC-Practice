@@ -21,3 +21,12 @@
 .cartButton:hover {
     color: #787878;
 }
+@media (max-width: 600px) {
+    .cartIconWrapper {
+        right: 10px;
+        top: 10px;
+    }
+
+    .cartIcon {
+        font-size: 20px;
+    } }

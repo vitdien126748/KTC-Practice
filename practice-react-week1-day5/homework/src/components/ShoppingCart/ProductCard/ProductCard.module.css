@@ -89,3 +89,14 @@
     align-items: center;
     justify-content: center;
 }
+@media (max-width: 600px) {
+    .productCard {
+        width: 100%;
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    .productImage {
+        height: 120px;
+    } 
+}

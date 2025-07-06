@@ -20,3 +20,36 @@
     font-weight: bold;
     padding: 10px;
 }
+@media (max-width: 900px) {
+    .shoppingCartContainer {
+        margin: 20px 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+    }
+
+    .headerTitle {
+        font-size: 20px;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .shoppingCartContainer {
+        margin: 8px 0;
+        border: none;
+    }
+
+    .header {
+        font-size: 16px;
+        padding: 4px;
+    }
+
+    .headerTitle {
+        font-size: 16px;
+        padding: 4px 0;
+    } 
+}
