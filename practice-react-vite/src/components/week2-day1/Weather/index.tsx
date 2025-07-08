@@ -25,7 +25,6 @@ export type HourForecast = {
     text: string;
     icon: string;
   };
-  is_day: number;
 };
 
 export type ForecastType = {
