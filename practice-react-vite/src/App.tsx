@@ -1,4 +1,5 @@
 import "./App.css";
+import MultiPageProductListingApp from "./components/week2-day1-08-07-2025/MultiPageProductListingApp";
 import Products from "./components/week2-day1/CRUD";
 import Weather from "./components/week2-day1/Weather";
 
@@ -6,7 +7,8 @@ function App() {
   return (
     <>
       {/* <Products /> */}
-      <Weather />
+      {/* <Weather /> */}
+      <MultiPageProductListingApp />
     </>
   );
 }
