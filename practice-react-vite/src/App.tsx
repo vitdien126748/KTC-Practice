@@ -7,10 +7,10 @@ import Weather from "./components/week2-day1/Weather";
 function App() {
   return (
     <>
-      {/* <Products /> */}
-      {/* <Weather /> */}
-      {/* <MultiPageProductListingApp /> */}
       <Dashboard />
+      <MultiPageProductListingApp />
+      <Weather />
+      <Products />
     </>
   );
 }
