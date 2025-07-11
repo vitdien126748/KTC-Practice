@@ -46,17 +46,13 @@ const RegisterForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
-    watch,
+    formState: { errors },
   } = useForm<RegisterFormInputs>({
     resolver: yupResolver(schema),
     defaultValues: {
       receiveEmails: false,
     },
-    mode: "onChange",
   });
-
-  const agreeChecked = watch("agree");
 
   const onSubmit: SubmitHandler<RegisterFormInputs> = (data) => {
     console.log(data);
@@ -252,8 +248,7 @@ const RegisterForm = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg py-3 mt-4 transition disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled={!isValid || !agreeChecked}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg py-3 mt-4 transition"
             >
               Create Account
             </button>

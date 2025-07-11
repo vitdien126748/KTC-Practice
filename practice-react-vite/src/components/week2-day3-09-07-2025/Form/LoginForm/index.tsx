@@ -1,9 +1,6 @@
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import React, { useState } from "react";
-import { FiEye, FiEyeOff } from "react-icons/fi";
-import { TbHexagonLetterG } from "react-icons/tb";
 
 const schema = yup.object({
   username: yup
@@ -22,83 +19,91 @@ const schema = yup.object({
         return emailRegex.test(value) || phoneRegex.test(value);
       }
     ),
-  password: yup
-    .string()
-    .required("Password is required")
-    .min(8, "Must be at least 8 characters")
-    .matches(
-      /^(?=.*[a-zA-Z])(?=.*\d)(?!.*\s).{8,}$/,
-      "Must contain at least 1 letter"
-    ),
-  rememberMe: yup.boolean().optional().default(false),
+  password: yup.string().required("Password is required"),
 });
 
 type LoginFormInput = {
   username: string;
   password: string;
-  rememberMe: boolean;
 };
 const LoginForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    setValue,
   } = useForm<LoginFormInput>({
     resolver: yupResolver(schema),
   });
 
-  const [showPassword, setShowPassword] = useState(false);
-
-  const onSubmit: SubmitHandler<LoginFormInput> = (data: LoginFormInput) => {
+  const onSubmit: SubmitHandler<LoginFormInput> = (data) => {
     console.log(data);
     alert("Login successful!");
-
-    if (data.rememberMe) {
-      localStorage.setItem(
-        "savedLogin",
-        JSON.stringify({
-          username: data.username,
-          password: data.password,
-        })
-      );
-    } else {
-      localStorage.removeItem("savedLogin");
-    }
   };
-
-  React.useEffect(() => {
-    const saved = localStorage.getItem("savedLogin");
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      setValue("username", parsed.username);
-      setValue("password", parsed.password);
-    }
-  }, [setValue]);
 
   return (
     <div className="min-h-screen bg-blue-50 flex items-center justify-center py-8 px-2">
       <div className="w-full max-w-5xl bg-white rounded-2xl shadow-lg flex flex-col md:flex-row overflow-hidden">
-        {/* Left Side*/}
-        <div className="md:w-1/2 bg-[#ECF1F4] flex flex-col justify-center items-center p-8 relative">
+        {/* Left Side */}
+        <div className="md:w-1/2 bg-blue-100 flex flex-col justify-center items-center p-8 relative">
           <h2 className="text-3xl font-bold text-blue-900 mb-6 text-left w-full">
             Set Your Partner
             <br />
             Recruitment on Auto-Pilot
           </h2>
-          <img
-            src="https://nhannn87dn.github.io/ui-form-antd-yup/statics/img/grovia.png"
-            alt="Grovia"
-            className="w-100px h-100px md:w-150px md:h-150px lg:w-200px lg:h-200px"
-          />
+          {/* Main illustration */}
+          <div className="relative flex justify-center items-center w-full">
+            <img
+              src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=400&q=80"
+              alt="main"
+              className="w-60 h-60 object-cover rounded-2xl shadow-lg z-10"
+            />
+            {/* Hexagon overlays */}
+            <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20">
+              <div className="flex gap-4">
+                <div className="w-20 h-20 bg-pink-200 rounded-2xl flex items-center justify-center -mt-8">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="avatar"
+                    className="w-16 h-16 object-cover rounded-full"
+                  />
+                </div>
+                <div className="w-20 h-20 bg-blue-200 rounded-2xl flex items-center justify-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/33.jpg"
+                    alt="avatar"
+                    className="w-16 h-16 object-cover rounded-full"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-10 z-20">
+              <div className="w-16 h-16 bg-yellow-200 rounded-2xl flex items-center justify-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  alt="avatar"
+                  className="w-12 h-12 object-cover rounded-full"
+                />
+              </div>
+            </div>
+            <div className="absolute bottom-0 right-10 z-20">
+              <div className="w-16 h-16 bg-yellow-200 rounded-2xl flex items-center justify-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/45.jpg"
+                  alt="avatar"
+                  className="w-12 h-12 object-cover rounded-full"
+                />
+              </div>
+            </div>
+          </div>
         </div>
         {/* Right Side */}
         <div className="md:w-1/2 w-full p-8 flex flex-col justify-center">
-          <div className="flex items-center justify-center mb-8">
-            <TbHexagonLetterG className="w-12 h-12 text-red-600 mb-2" />
-            <span className="text-[#192C48] font-semibold text-3xl pb-3">
-              Grovia
-            </span>
+          <div className="flex flex-col items-center mb-8">
+            <img
+              src="https://seeklogo.com/images/G/grovia-logo-6B1B9C6A6C-seeklogo.com.png"
+              alt="Grovia"
+              className="w-24 mb-2"
+            />
           </div>
           <h2 className="text-2xl font-bold text-red-700 mb-2">Login</h2>
           <div className="mb-6">
@@ -131,23 +136,12 @@ const LoginForm = () => {
               <label className="block text-gray-700 text-sm mb-1">
                 Password
               </label>
-              <div className="relative">
-                <input
-                  {...register("password")}
-                  type={showPassword ? "text" : "password"}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400 pr-10"
-                  placeholder="Password"
-                />
-                <button
-                  type="button"
-                  tabIndex={-1}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
-                  onClick={() => setShowPassword((v) => !v)}
-                  aria-label={showPassword ? "Hide password" : "Show password"}
-                >
-                  {showPassword ? <FiEyeOff size={20} /> : <FiEye size={20} />}
-                </button>
-              </div>
+              <input
+                {...register("password")}
+                type="password"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                placeholder="Password"
+              />
               {errors.password && (
                 <span className="text-red-500 text-xs">
                   {errors.password.message}
@@ -159,7 +153,7 @@ const LoginForm = () => {
                 <input
                   type="checkbox"
                   className="mr-2 accent-red-600"
-                  {...register("rememberMe")}
+                  defaultChecked
                 />
                 Remember me
               </label>
