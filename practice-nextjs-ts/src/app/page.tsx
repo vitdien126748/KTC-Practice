@@ -1,32 +1,18 @@
-import Link from "next/link";
+import Link from "next/dist/client/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Welcome to Our App
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Discover amazing features and connect with our community. Start your
-            journey today!
-          </p>
-          <div className="space-x-4">
-            <Link
-              href="/products"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700"
-            >
-              View Products
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-block bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-300"
-            >
-              Contact Us
-            </Link>
-          </div>
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <main className="w-full max-w-md mx-auto px-4 py-12">
+        <div className="bg-white rounded-xl shadow-md p-8 text-center space-y-6">
+          <h1 className="text-3xl font-bold text-gray-900">Exercises</h1>
+          <p className="text-gray-600">Select a week to view exercises:</p>
+          <Link
+            href="/week3-day2-15-07-2025"
+            className="block w-full bg-indigo-600 text-white py-3 rounded-lg font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-200"
+          >
+            Week3 Day2 15/07/2025
+          </Link>
         </div>
       </main>
     </div>
