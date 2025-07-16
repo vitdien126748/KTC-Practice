@@ -13,6 +13,12 @@ export default function Home() {
           >
             Week3 Day2 15/07/2025
           </Link>
+          <Link
+            href="/week3-day3-16-07-2025"
+            className="block w-full bg-indigo-600 text-white py-3 rounded-lg font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-200"
+          >
+            Week3 Day3 16/07/2025
+          </Link>
         </div>
       </main>
     </div>
