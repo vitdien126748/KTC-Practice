@@ -1,8 +1,5 @@
 package com.example.practice_java_spring_boot.dtos;
 
-import java.util.Set;
-
-import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,14 +9,16 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateUserRequestDto {
+public class LoginResponseDto {
+    private Long id;
     private String username;
-
-    @Email(message = "Email should be valid")
     private String email;
+    private String accessToken;
+    @Builder.Default
+    private String tokenType = "Bearer";
 
-    private String address;
+    public LoginResponseDto(String accessToken) {
+        this.accessToken = accessToken;
+    }
 
-    private String password;
-    private Set<String> roles;
 }

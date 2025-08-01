@@ -1,8 +1,5 @@
 package com.example.practice_java_spring_boot.dtos;
 
-import java.util.Set;
-
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,18 +10,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateUserRequestDto {
+public class LoginRequestDto {
     @NotBlank(message = "Username is required")
     private String username;
-
-    @NotBlank(message = "Email is required")
-    @Email(message = "Email should be valid")
-    private String email;
-
-    private String address;
-
     @NotBlank(message = "Password is required")
     private String password;
-
-    private Set<String> roles;
 }

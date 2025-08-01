@@ -12,7 +12,7 @@ import jakarta.validation.Valid;
 import java.util.*;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController {
     private final UserService service;
 
@@ -25,8 +25,8 @@ public class UserController {
         return service.getAllUsers();
     }
 
-    @GetMapping("/{id}")
-    public UserResponseDto getById(@PathVariable("id") Long id) {
+    @GetMapping("/id/{id}")
+    public UserResponseDto getById(@PathVariable Long id) {
         return service.getUserById(id);
     }
 
@@ -36,13 +36,18 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public UserResponseDto update(@PathVariable("id") Long id,
+    public UserResponseDto update(@PathVariable @Valid Long id,
             @RequestBody @Valid UpdateUserRequestDto updateUserRequestDto) {
         return service.updateUser(id, updateUserRequestDto);
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable("id") Long id) {
+    public String delete(@PathVariable Long id) {
         return service.deleteUser(id);
+    }
+
+    @GetMapping("/username/{username}")
+    public Optional<UserResponseDto> findByUsername(@PathVariable String username) {
+        return service.findByUsername(username);
     }
 }

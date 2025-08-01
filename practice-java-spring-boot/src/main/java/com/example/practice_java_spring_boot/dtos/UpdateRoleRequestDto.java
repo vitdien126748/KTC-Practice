@@ -1,7 +1,5 @@
 package com.example.practice_java_spring_boot.dtos;
 
-import java.util.Set;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,10 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserResponseDto {
-    private String id;
-    private String username;
-    private String email;
-    private String address;
-    private Set<String> roles;
+public class UpdateRoleRequestDto {
+    private String name;
 }
