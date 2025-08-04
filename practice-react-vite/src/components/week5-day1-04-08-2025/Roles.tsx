@@ -73,7 +73,7 @@ export default function Roles() {
             </div>
             <div className="flex space-x-3">
               <button
-                onClick={() => window.location.href = "/dashboard"}
+                onClick={() => (window.location.href = "/dashboard")}
                 className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-sm font-medium"
               >
                 Back to Dashboard
@@ -221,14 +221,16 @@ export default function Roles() {
                           <td className="px-6 py-4 text-sm text-gray-900">
                             {role.permissions && role.permissions.length > 0 ? (
                               <div className="flex flex-wrap gap-1">
-                                {role.permissions.slice(0, 3).map((permission, idx) => (
-                                  <span
-                                    key={idx}
-                                    className="inline-flex px-2 py-1 text-xs rounded bg-blue-100 text-blue-800"
-                                  >
-                                    {permission}
-                                  </span>
-                                ))}
+                                {role.permissions
+                                  .slice(0, 3)
+                                  .map((permission, idx) => (
+                                    <span
+                                      key={idx}
+                                      className="inline-flex px-2 py-1 text-xs rounded bg-blue-100 text-blue-800"
+                                    >
+                                      {permission}
+                                    </span>
+                                  ))}
                                 {role.permissions.length > 3 && (
                                   <span className="text-xs text-gray-500">
                                     +{role.permissions.length - 3} more
@@ -236,7 +238,9 @@ export default function Roles() {
                                 )}
                               </div>
                             ) : (
-                              <span className="text-gray-400 text-xs">No permissions</span>
+                              <span className="text-gray-400 text-xs">
+                                No permissions
+                              </span>
                             )}
                           </td>
                         </tr>

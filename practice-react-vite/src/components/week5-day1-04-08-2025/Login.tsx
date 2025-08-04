@@ -4,6 +4,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import api from "./apiClient";
 import { useNavigate } from "react-router";
 
+interface LoginForm {
+  username: string;
+  password: string;
+}
+
 const loginSchema = yup.object().shape({
   username: yup.string().required("Username is required"),
   password: yup
@@ -27,7 +32,7 @@ export default function Login() {
     },
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: LoginForm) => {
     try {
       const res = await api.post("/auth/login", data);
       localStorage.setItem("token", res.data.accessToken);
